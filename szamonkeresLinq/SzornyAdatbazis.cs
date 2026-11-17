@@ -17,8 +17,9 @@ namespace szamonkeresLinq
         private static string connectionString =
        $"Server={server};Database={databaseName};Uid={userName};Pwd={password};";
 
-       public static List<Szorny> Feltolt(List<Szorny> szornyek)
+       public static List<Szorny> Feltolt()
         {
+            List<Szorny> szornyek = new List<Szorny>();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
